@@ -1,0 +1,3174 @@
+/*********************
+index
+
+1. RESET
+2. GENERAL STYLES
+3. HEADER AND LOGO
+3.1 MOBILE MENU
+3.2 DESKTOP MENU
+3.3 INNER ICON MENUS
+4. RSVP
+5. OUR STORY
+6. INFO
+7. TALK
+8. MUSIC
+9. MONEY
+10. BOWL
+11. FIXED FOOTER
+12. min-width: 480px
+13. min-width: 768px;
+
+*********************/
+
+/***************************************************************************
+1.  html5 doctor css reset | http://html5doctor.com/html-5-reset-stylesheet
+*****************************************************************************/
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+body{line-height:1}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+nav ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}
+ins{background-color:#ff9;color:#000;text-decoration:none}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle}
+
+
+
+
+/*************************************************************************************
+2. GENERAL STYLES
+*************************************************************************************/
+*{
+	box-sizing: border-box;
+}
+
+/**{
+	user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-user-select:none;
+	-webkit-touch-callout: none;
+}*/
+
+* {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+*:focus {
+    outline: 0;
+}
+
+input::-moz-focus-inner { 
+  border: 0; 
+}
+
+
+html{
+	font-family: 'Buda';
+	font-weight: 600;
+	font-size: 10px;
+	color: #333333;
+}
+
+body{
+	background: url('../img/BG_PATTERNS/pattern_general@X.jpg') repeat;
+}
+
+
+
+.wrapper{
+
+}
+
+.inner-wrapper{
+		width: 100%;
+		max-width: 1024px;
+		margin-top: 0px;
+		margin-right: auto;
+		margin-bottom: 0px;
+		margin-left: auto;
+	}
+
+.module{
+	width: 100%;
+}
+.module:before{
+	content: " ";
+	position: absolute;
+	margin-left: -1rem;
+	margin-top: -1rem;
+	display: block;
+	height: 3.5rem;
+	width: 100%;
+	float: left;
+	margin-right: 0px;
+	margin-bottom: 2rem;
+	background: url('../img/general/web-titulos-banderines.png') repeat-x;
+	background-size: auto 100%;
+}
+
+.area-title{
+	float: left;
+	clear: right;
+	width: 100%;
+	
+	
+	font-size: 3.6rem;	
+	
+
+}
+.area-title-h1,
+.area-title-h2{
+	float: left;
+	height: 4rem;
+	width: auto;
+	font-family: 'Amatic SC', cursive;
+	margin-top: 3.5rem;
+	
+	
+
+/*
+ESTO SIRVE PARA CENTRARLO COMO QUE TODO, pero ya no se necesita aca :(;
+
+Internet Explorer 10
+display:-ms-flexbox;
+-ms-flex-pack:center;
+-ms-flex-align:center;
+
+/* Firefox
+display:-moz-box;
+-moz-box-pack:center;
+-moz-box-align:center;
+
+/* Safari, Opera, and Chrome
+display:-webkit-box;
+-webkit-box-pack:center;
+-webkit-box-align:center;
+
+/* W3C
+display:box;
+box-pack:center;
+box-align:center;
+
+*/
+} 
+.area-title-h2{
+	padding-top: 0.5rem;
+	margin-left: 0.5rem;
+	font-family: 'Pacifico', cursive;
+	color: #F76666;
+	font-weight: 200;
+	font-size: 3.2rem;
+}
+
+.ver-mas{
+	overflow: hidden;
+	width: 100%;
+	margin: 20px 0;
+	
+	cursor:pointer;
+	color: #c64442;
+	text-transform: uppercase;
+	text-align: center;
+	font-family: 'Crushed';
+	font-size: 1.3rem;
+
+}
+
+.ver-mas-text{
+	margin: 0 auto;
+	display: block;
+	width: 100px;
+	margin-bottom: 5px;
+}
+
+.ver-mas-img{
+	height: 30px;
+	width: 175px;
+	margin: 0 auto;
+	display: block;
+
+	background: url('../img/general/web-spacer.png') no-repeat;
+	background-size: 100%;
+}
+.story-event,
+.info-article,
+.post {
+	overflow: hidden;
+}
+
+
+/* Z Index */
+.header-top{z-index: 999;}
+.groom, 
+.bride {z-index: 10;}
+.mobile-menu {z-index: 99999;}
+.logo-img{z-index: 1;}
+.header-top:before {z-index: 999;}
+.story-menu,
+.info-menu,
+.talk-menu{z-index: 10;}
+.lightbox-modal{z-index: 99999}
+.desc-menu-item[active="true"]:after,
+.desc-menu-item:hover:after{z-index: 100;}
+.desc-menu-item:hover:active{z-index: 100;}
+.reply-form-wrapper,
+.comment-form-wrapper {z-index: 9999;}
+.music-internal-wrapper {z-index: 200;}
+.music-form-internal-wrapper {z-index: 200;}
+#footer{z-index: 9999;}
+
+/******************************************************************************
+3. HEADER AND LOGO
+*******************************************************************************/
+.headroom {
+    -webkit-transition: transform 200ms linear;
+    -moz-transition: transform 200ms linear;
+    -ms-transition: transform 200ms linear;
+    -o-transition: transform 200ms linear;
+    transition: transform 200ms linear;
+}
+.headroom--pinned {
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -o-transform: translateY(0%);
+    transform: translateY(0%);
+}
+.headroom--unpinned {
+    -webkit-transform: translateY(-100%);
+ 	-moz-transform: translateY(-100%);
+  	-ms-transform: translateY(-100%);
+   	-o-transform: translateY(-100%);
+    transform: translateY(-100%);
+}
+
+.header{
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+
+.header-top{
+	padding: 10px;
+	position: fixed;
+	height: 80px;
+	width: 100%;
+	background: url('../img/BG_PATTERNS/pattern_general@X.jpg') repeat;
+
+}
+.logo-container{
+	float: left;
+	width: 78%;
+	max-width: 335px;
+	margin: 0 auto;
+	overflow: hidden;
+
+
+}
+.logo-names{
+	display: inline-block;
+	position: absolute;
+	font-family: 'Euphoria Script', cursive;
+	font-size: 5rem;
+	font-weight: 200;
+	color: #614b38;
+}
+
+.logo-img{
+	display: inline-block;
+	position: relative;
+	height: 60px;
+	left: 10px;
+	width: auto;
+
+}
+
+.bride{
+	left: 186px;
+}
+
+
+/*******************************************************************
+3.1 MOBILE MENU
+*******************************************************************/
+
+.mobile-menu-icon {
+	margin-top: 10px;
+	width: 50px;
+	float: right;
+	background: url('../img/general/sprites/mobile-button.png') no-repeat;
+	background-position: 0 -35px;
+	height: 35px;
+	float: right;
+	cursor: pointer;
+	background-size: 100%;
+}
+
+.mobile-menu-icon:hover,
+.mobile-menu-icon:active {
+	background-position: 0 0px;
+}
+
+.mobile-menu {
+	height: 100%;
+	top: 0;
+	bottom: 0;
+	right:-100%;
+	position: fixed;
+	width: 100%;
+	/*padding-top:115px;*/
+	background: rgba(0,0,0,0);
+	font-size: 2.25em;
+	text-transform: uppercase;
+
+	-webkit-transition-duration: 500ms;
+    -moz-transition-duration: 500ms;
+    -o-transition-duration: 500ms;
+    transition-duration: 500ms;
+}
+
+.mobile-menu-icon-inner {
+	height: 0;
+}
+
+.mobile-menu-icon-inner-button {
+	position: absolute;
+	display: block;
+	z-index: 9999;
+	right: 30px;
+	border: none;
+
+	top: -16px;
+	width: 75px;
+	height: 75px;
+	float: right;
+	background: url('../img/general/menu_cerrar.jpg') no-repeat;
+	background-position: 0 -75px;
+	cursor: pointer;
+}
+.mobile-menu-icon-inner-button:hover,
+.mobile-menu-icon-inner-button:active{
+	background: url('../img/general/menu_cerrar.jpg') no-repeat;
+	background-position: 0 0;
+}
+
+
+
+.header-top:before {
+	content: " ";
+	display: block;
+	position: absolute;
+	top: 79px;
+	left: 0;
+	height: 1px;
+	width: 100%;
+	background: rgba(3, 3, 3, 0.1);
+}
+
+.mobile-menu-ul{
+	list-style: none;
+}
+
+.mobile-menu-li {
+	overflow: hidden;
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	margin: 0 auto;
+	position: relative;
+	border-bottom: 1px solid rgba(3,3,3,0.1);
+}
+
+
+.mobile-menu-link {
+	float: left;
+	clear: right;
+	width: 100%;
+	font-family: 'Pacifico', cursive;
+	padding-left: 20px;
+	font-weight: 200;
+	color: #F76666;
+	text-transform: capitalize;
+	text-decoration: none;
+
+
+}
+
+.menu-title-h1{
+	display: inline-block;
+	font-family: 'Amatic SC', cursive;
+	color: rgb(51, 51, 51);
+	font-size: 4rem;
+}
+.menu-title-h2{
+	display: inline-block;
+	color: #F76666;
+	font-size:3.2rem;
+	text-transform: lowercase;
+	padding-left: 5px;
+}
+
+
+
+
+
+/*Story background*/
+.mobile-menu-li.mobile-menu-story {
+	background: url('../img/BG_PATTERNS/pattern_nuestrahistoria@x.jpg') repeat;
+}
+
+/*info background*/
+.mobile-menu-li.mobile-menu-info {
+	background: url('../img/BG_PATTERNS/pattern_loquenecesitassaber@x.jpg') repeat;
+}
+
+/*Talk background*/
+.mobile-menu-li.mobile-menu-talk {
+	background: url('../img/BG_PATTERNS/pattern_temas_@X.jpg') repeat;
+}
+
+/*Music background*/
+.mobile-menu-li.mobile-menu-music {
+	background: url('../img/BG_PATTERNS/pattern_lafiesta_@x.jpg') repeat;
+}
+
+/*Money background*/
+.mobile-menu-li.mobile-menu-money {
+	background: url('../img/BG_PATTERNS/pattern_lachanchita_@X.jpg') repeat;
+}
+
+/*Bowl background*/
+.mobile-menu-li.mobile-menu-bowl {
+	background: url('../img/BG_PATTERNS/pattern_nuestrahistoria@x.jpg') repeat;
+}
+
+
+
+
+
+
+
+
+/********************************************************************
+3.2 DESKTOP MENU
+*********************************************************************/	
+
+.desktop-menu {
+	display: none; /*Sera mostrado a partir de 1024*/
+}
+
+
+
+
+
+/***********************************************************************
+3.3 INNER ICON MENUS
+************************************************************************/
+
+
+.story-menu,
+.info-menu,
+.talk-menu{
+	overflow: hidden;
+	float: left;
+	width: 100%;
+	position: relative;
+}
+
+.talk-icon-menu,
+.talk-desc-menu,
+.story-icon-menu,
+.story-desc-menu,
+.info-icon-menu,
+.info-desc-menu{
+	overflow: hidden;
+}
+
+
+
+.timeline-arrow{
+	width: 100%;
+	height: 8%;
+	float: left;
+}
+
+.talk-menu-item,
+.icon-menu-item,
+.info-menu-item{
+	list-style: none;
+	width: 25%;
+	height: 65px;
+	float: left;
+	overflow: hidden;
+
+	text-align: center;
+}
+
+.info-menu-item{
+	height:60px;
+}
+
+.talk-menu-item{
+	width: 50%;
+}
+
+.icon-menu-link{
+	display: block;
+	width: 63px;
+	height: 65px;
+	margin: 0 auto;
+	
+	background: #fff;
+	cursor: pointer;
+	
+}
+
+
+/*
+.icon-menu-link:hover,
+.icon-menu-link:active{
+	border: solid 1px transparent;
+	width: 63px;
+
+	
+    
+
+}
+*/
+
+.icon-reconocimos{
+	
+	background: url('../img/historia/web-historia-timeline-pajaritos.png')  no-repeat;
+	background-size: 100% 100%;
+}
+
+
+
+.icon-enamoramos{
+	background: url('../img/historia/web-historia-timeline-corazon.png')  no-repeat;	
+	background-size: 100% 100%;
+}
+
+.icon-regresamos{
+	background: url('../img/historia/web-historia-timeline-location.png')  no-repeat;
+	background-size: 100% 100%;
+}
+
+.icon-comprometimos{
+	background: url('../img/historia/web-historia-timeline-anillos.png')  no-repeat;
+	background-size: 100% 100%;
+}
+
+.icon-llegar{
+	background: url('../img/info/web-necesitassaber-timeline-reloj.png')  no-repeat;
+	background-size: 100% 100%;
+}
+
+.icon-dresscode{
+	background: url('../img/info/web-necesitassaber-timeline-dresscode.png')  no-repeat;
+	background-size: 100% 100%;
+}
+
+.icon-evento{
+	background: url('../img/info/web-necesitassaber-timeline-peeps.png')  no-repeat;
+	background-size: 100% 100%;
+}
+
+.icon-instagram{
+	background: url('../img/info/web-necesitassaber-timeline-instagram.png')  no-repeat;
+	background-size: 100% 100%;
+}
+
+.icon-post-1{
+	background: url('../img/talk/web-temas-bubble-novia.png')  no-repeat;
+	background-size: 100% 100%;
+}
+
+.icon-post-2{
+	background: url('../img/talk/web-temas-bubble-novio.png')  no-repeat;
+	background-size: 100% 100%;
+}
+
+.talk-desc-menu,
+.story-desc-menu,
+.info-desc-menu{
+	float: left;	
+	padding-top: 5px;
+	width: 100%;
+
+	text-align: center;
+	list-style: none;	
+	text-transform: uppercase;
+}
+
+
+
+.desc-menu-li{
+	float: left;
+	min-width: 25%;
+	max-width: 25%;
+	padding-bottom: 25px;
+}
+
+.desc-talk-li{
+	float: left;
+	min-width: 50%;
+	max-width: 50%;
+	padding-bottom: 10px;
+}
+
+.desc-menu-item{
+	cursor: pointer;
+	width: auto;
+	max-width: 200px;
+	min-height: 30px;
+	padding:5px 5px 5px 5px;
+	position: relative;
+	display: block;
+	margin: 0 auto;
+}
+
+.desc-talk-item{
+	width: 80px;
+}
+
+.nos{
+	font-family: 'Crushed';
+	font-size: 1rem;
+}
+
+.fact{
+	font-family: 'Crushed';
+	font-size: 1.2rem;
+}
+
+
+.desc-menu-item[active="true"],
+.desc-menu-item.hovered,
+.desc-menu-item:hover{
+
+	color: #fff;
+	font-weight: 100;
+	
+}
+.desc-menu-item[active="true"],
+.desc-menu-item.hovered,
+.desc-menu-item:hover{
+	background: #F76767;
+}
+.desc-menu-item.desc-info-item[active="true"],
+.desc-menu-item.desc-info-item.hovered,
+.desc-menu-item.desc-info-item:hover{
+	background-color: #61ab8a;
+}
+.desc-menu-item.desc-talk-item[active="true"],
+.desc-menu-item.desc-talk-item.hovered,
+.desc-menu-item.desc-talk-item:hover{
+	background-color: #81CBCB;
+}
+.desc-menu-item[active="true"]:after,
+.desc-menu-item.hovered:after,
+.desc-menu-item:hover:after{
+	content: " ";
+	position:absolute;
+	display: block;
+	top: 98%;
+	left: 45%;
+	width: 1px;
+	height: 1px;
+	border-style: solid;
+	border-width: 10px 5px 0 5px;
+	border-color: #F76767 transparent transparent transparent;
+
+}
+
+.desc-menu-item.desc-info-item:after{
+	border-color: #61ab8a transparent transparent transparent;
+}
+
+.desc-menu-item.desc-talk-item:after{
+	border-color: #81CBCB transparent transparent transparent;
+}
+
+
+/* ********************************************************************
+4. RSVP
+**********************************************************************/
+
+.rsvp{
+	display: block;
+	/*overflow: hidden;*/
+	padding: 15px 10px;
+	padding-top: 90px;
+	margin-bottom: 3px;
+	height: 145px;
+	
+	background: #F7CD89;
+	color: #634e3d;
+}
+.rsvp-modal{
+	display: none;
+}
+
+.rsvp-left{
+	float: left;
+	width: 30%;
+}
+.rsvp-right{
+	float: right;
+	max-width: 70%;
+}
+.rsvp-inner-right-cont{
+	float: left;
+	width: 100%;
+}
+.rsvp-item{
+	
+
+	display: block;
+}
+
+.welcome,
+.guest-name{
+	float: left;
+	clear: left;
+	font-size: 2.4rem;
+
+}
+
+.welcome{
+	font-family: 'Tulpen One', cursive;
+	font-weight: 200;
+	letter-spacing: 1.5px;
+}
+
+.guest-name{
+	font-family: 'Amatic SC', cursive;
+	font-weight: bold;
+	font-size: 2rem;
+	max-width: 60%;
+	overflow: hidden;
+}
+
+.options-icon{
+	text-indent: -9999px;
+	background: url('../img/general/logout-flecha.png') no-repeat;
+	width: 20px;
+	height: 20px;
+	float: left;
+	background-size: 20px 20px;
+	margin: 2px 5px;
+	margin-left: 5px;
+}
+
+.options-ul{
+	display: none;
+	overflow: hidden;
+	text-indent: 0;
+	list-style: none;
+	position: absolute;
+	top: 145px;
+	min-width: 150px;
+	z-index: 500;
+	background: rgba(247, 205, 137, 0.85);
+	left: 0px;
+	padding: 10px;
+	transition: 1s ease-in;
+	-webkit-transition: 1s ease-in;
+	-moz-transition: 1s ease-in;
+}
+
+.options-item{
+	float: right;
+	clear: both;
+	width: 100%;
+}
+
+.options-action{
+	display: block;
+	text-decoration: none;
+	color: rgb(99, 78, 61);
+	font-size: 1.8rem;
+	line-height: 2.5rem;
+	font-family: 'Amatic SC', cursive;
+	font-weight: bold;
+}
+
+.options-action:hover,
+.options-action:active{
+	color: #f86767;
+}
+
+.options-action.email:after,
+.options-action.logout:after{
+	content: " ";
+	margin-left: 10px;
+	float: right;
+	display: block;
+	width: 18px;
+	height: 18px;
+	margin-top: 5px;
+}
+.options-action.email:after{
+	
+	background: url('../img/general/logout_mail.png') no-repeat;
+	background-size: 18px auto;
+
+}
+
+.options-action.logout:after{
+	
+	background: url('../img/general/logout_user.png') no-repeat;
+	background-size: 18px 18px;
+
+}
+
+
+
+.rsvp-title,
+.rsvp-button{
+	float: right;
+
+	font-family: 'Amatic SC', cursive;
+	font-size: 2.5rem;
+	font-weight: bold;
+
+}
+.rsvp-title{
+
+	line-height: 40px;
+	color: #634e3d;
+	font-size: 3rem;
+	font-family: "Crushed";
+	font-weight: lighter;
+	letter-spacing: 1.5px;
+}
+
+.rsvp-button{
+	width: 40px;
+	height: 40px;
+	
+	margin-left: 10px;
+
+	border: none;
+	background: #f7f1d1;
+	color: #634e3d;
+}
+
+.rsvp-message{
+	float: left;
+	display: block;
+	font-family: 'Unkempt';
+	font-weight: 200;
+}
+
+
+.rsvp-going-btn,
+.rsvp-not-going-btn{
+	background: url('../img/rsvp/web-rsvp-vacio-check.png')no-repeat;
+	background-size: 100% 100%;
+}
+
+
+.rsvp-going-message, .rsvp-not-going-message {
+	float: right;
+	width: 145px;
+	text-align: right;
+}
+
+.rsvp-going-message::before{
+	content: " ";
+	display: block;
+	float: left;
+	margin-top: -5px;
+	margin-left: 10px;
+	height: 45px;
+	width: 40px;
+
+	background: url('../img/rsvp/web-rsvp-yes-cake.png')no-repeat;
+	background-size: 100% 100%;
+
+}
+
+.rsvp-not-going-message::before{
+	content: " ";
+	display: block;
+	float: left;
+	margin-top: 0 ;
+	margin-right: -5px; 
+	height: 35px;
+	width: 45px;
+
+	background: url('../img/rsvp/web-rsvp-no-gift.png')no-repeat;
+	background-size: 100% 100%;
+}
+
+
+/************************************************************************************ 
+5. OUR STORY 
+*************************************************************************************/
+.story{
+	padding: 10px;
+	overflow: hidden;
+	background: url('../img/BG_PATTERNS/pattern_nuestrahistoria@x.jpg') repeat;
+
+}
+
+.story-text{
+	float: left;
+	clear: left;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 2rem;
+	font-weight: 300;
+	line-height: 3rem;
+}
+
+
+
+.story-event{
+	margin: 10px;
+	padding: 10px;
+	overflow: hidden;
+	background-color: rgba(255,255,255,0.4);
+	text-align: justify;
+
+}
+
+
+
+
+.nos,
+.fact{
+
+	display: block;
+}
+ 
+
+
+
+
+/*Story texts*/
+
+.story-events-container{
+	float: left;
+	position: relative;
+
+}
+
+
+
+
+.event-top{
+	width: 100%;
+}
+
+.event-top:before{
+	content: " ";
+	width:25px;
+	height: 25px;
+	margin-top: 15px;
+	float:left;
+
+	background: url('../img/historia/web-historia-timeline-subtitulo-left.png') no-repeat;
+	background-size: auto 100%;
+}
+
+.event-top:after{
+	content: " ";
+	width:25px;
+	height: 25px;
+	margin-top: 15px;
+	float:right;
+
+	background: url('../img/historia/web-historia-timeline-subtitulo-right.png') no-repeat;
+	background-size: auto 100%;
+}
+
+.event-title{
+	float: left;
+	font-family: 'Crushed';
+	font-size: 1.8rem;
+}
+.event-date{
+	float: left;
+	font-family: 'Crushed';
+	font-size: 1.4rem;
+}
+
+.event-title-container{
+	float: left;
+	padding-top: 10px;
+}
+
+.event-title-icon{
+	float: left;
+	width: 25%;
+	height: auto;
+}
+
+
+
+.event-body{
+	margin-top: 1rem;
+	font-family: 'Buda';
+}
+
+.event-bride,
+.event-groom{
+	float: left;
+}
+
+.event-bride:before{
+	content: " ";
+	float: left;
+	width: 10rem;
+	height: 10rem;
+	background: url('../img/historia/web-historia-timeline-bride.png') no-repeat;
+	background-size: 100% 100%;
+	margin-bottom: 1rem;
+	margin-right: 1rem;
+	
+}
+
+.event-groom:before{
+	content: " ";
+	float: left;
+	width: 10rem;
+	height: 10rem;
+	background: url('../img/historia/web-historia-timeline-groom.png') no-repeat;
+	background-size: 100% 100%;
+	margin-bottom: 1rem;
+	margin-right: 1rem;
+}
+
+.event-speaker{
+	font-family: 'Amatic SC';
+	line-height: 10rem;
+	font-size: 4rem;
+	clear: right;
+
+
+}
+
+
+.event-text{
+	clear: left;
+	margin-top: 5px;
+	font-size: 1.6rem;
+	line-height: 2.2rem;
+}
+
+
+
+/*********************************************************************************
+6. INFO
+********************************************************************************/
+
+
+.info{
+
+	background: url('../img/BG_PATTERNS/pattern_loquenecesitassaber@x.jpg') repeat;
+	overflow: hidden;
+	padding: 10px;
+}
+
+
+.info-article{
+	/*display: none;*/
+	width: 100%;
+	margin: 10px;
+	padding: 10px;
+	float: left;
+	clear: left;
+
+	background-color: #e1ded9;
+
+}
+
+.info-desc{
+	float: left;
+	clear: left;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 2rem;
+	font-weight: 300;
+	line-height: 3rem;
+}
+
+
+.event-top{
+	color: #cc3333;
+	float: left;
+}
+
+
+
+.event-body{
+	float: left;
+}
+
+.info ul{
+	list-style: none;
+}
+
+.info-timetable-li{
+	overflow: hidden;
+	margin: 10px;
+}
+.info h4,
+.info-timetable-time{
+	color: #ed7961;
+	text-transform: uppercase;
+	
+}
+.info h4{
+	margin: 10px 0;
+	font-size: 1.4rem;
+}
+.info-timetable-time{
+	width: 15%;
+	float: left;
+	font-size: 1.2rem;
+	line-height: 2rem;
+}
+
+.info article p{
+	font-size: 1.6rem;
+	margin-bottom: 5px;
+	line-height: 2.2rem;
+}
+/* directions */
+
+.info-directions-img,
+.info-timetable-img,
+.info-dresscode-img{
+	width: 100%;
+	max-width: 663px;
+	margin: 20px auto;
+	padding-top: 30px;
+	display: block;
+	
+}
+
+.dresscode-text{
+	float: left;
+}
+
+.lightbox-modal{
+	display: none;	
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(3,3,3,0.8);
+	border: 5px solid #fff;
+	overflow: scroll;
+}
+
+.lightbox-modal img{
+	display: block;
+	
+	width: 100%;
+}
+
+/* timetable */
+.info-timetable-desc{
+	float: left;
+	margin-left: 5%;
+	width: 80%;
+}
+
+/* instagram */
+.instagram-text-li{
+	margin-bottom: 0.5rem;
+}
+
+.info-instagram-tag{
+	width: 230px;
+	height: 50px;
+	margin-bottom: 20px;
+	display: block;
+	background: url('../img/general/sprite_instagram_hashtag.png') no-repeat;
+	background-position: 0 0;	
+	
+	
+}
+.info-instagram-tag:hover,
+.info-instagram-tag:active{
+	background: url('../img/general/sprite_instagram_hashtag.png') no-repeat;
+	background-position: 0 -50px;	
+}
+
+
+/*Instagram gallery*/
+.instagram-gallery {
+	max-width: 95%;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.instagram-gallery div {
+	width: 150px;
+	margin: 10px auto;
+	display: block;
+}
+
+.instagram-gallery div img {
+	width: 150px;
+	height: auto;
+	border: 5px solid #fff;
+	border-bottom: 30px solid #fff;
+}
+
+
+
+
+
+/********************************************************************************
+7. TALK
+*********************************************************************************/
+
+
+
+.talk{
+	overflow: hidden;
+	background: url('../img/BG_PATTERNS/pattern_temas_@X.jpg') repeat;
+	padding: 10px;
+}
+
+.talk-header{
+	overflow: hidden;
+}
+
+.talk-desc{
+	float: left;
+	clear: left;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 2rem;
+	font-weight: 300;
+	line-height: 3rem;
+}
+
+.talk-menu{
+	overflow: hidden;
+}
+
+.post{
+	/*display: none;*/
+	margin: 10px;
+	padding: 10px;
+
+	background-color: rgba(218,212,219,0.4)
+}
+
+.post-desc{
+	font-size: 1.6rem;
+	margin-bottom: 5px;
+	line-height: 2.2rem;
+}
+
+.post-body{
+	overflow: hidden;
+	padding-top: 20px;
+}
+
+.comment-action{
+	width: 230px;
+	height: 46px;
+	
+	background: url('../img/general/sprites/sprite_btns_actionposts@1.png') no-repeat;
+	background-position: -10px -507px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.comment-action:hover,
+.comment-action:active{
+
+	background: url('../img/general/sprites/sprite_btns_actionposts@1.png') no-repeat;
+	background-position: -10px -461px;
+	
+}
+
+.comment-form,
+.reply-form{
+	display: none;
+}
+
+.comment-guest{
+
+	overflow: hidden;
+	margin-left: 10px;
+	float: left;
+	
+}
+.guest-img,
+.comment-nickname,
+.comment-time{
+	float: left;
+
+}
+
+.comment-nickname{
+	text-transform: capitalize;
+	font-family: 'Amatic SC';
+	font-weight: 600;
+	font-size: 2.5rem;
+	color: #604b37;
+	margin-bottom: 5px
+
+}
+.comment-time{
+	font-family: 'Crushed';
+	font-size: 1.6rem;
+	font-weight: 200;
+	clear: both;
+	color: #ed7961;
+	text-transform: uppercase;
+}
+
+.guest-img{
+	width: 55px;
+	height: 55px;
+	background: url('../img/general/sprites/sprite_id_thumb.jpg') no-repeat;
+	background-position: 0 0;
+	
+}
+
+.guest-img.pedro{
+	background: url('../img/talk/thumb_id_novio.jpg') no-repeat;
+	background-size: 100% 100%;
+}
+
+.guest-img.lucia{
+	background: url('../img/talk/thumb_id_novia.jpg') no-repeat;
+	background-size: 100% 100%;
+}
+
+
+
+.guest-img.grey{
+	background-position: 0 0;
+}
+
+.guest-img.green{
+	background-position: 0 -55px;
+}
+
+.guest-img.orange{
+	background-position: 0 -110px;
+}
+
+.guest-img.violet{
+	background-position: 0 -165px;
+}
+
+.guest-img.blue{
+	background-position: 0 -220px;
+}
+
+.guest-img.white{
+	background-position: 0 -275px;
+}
+
+.guest-img.yellow{
+	background-position: 0 -330px;
+}
+
+
+
+.comment-body,
+.reply-body{
+	float: left;
+	clear: both;
+	width: 100%;
+	margin-top:10px;
+    font-size: 1.4rem;
+}
+
+
+/*
+
+escondemos este ya que no queremos mostrar el primer comment
+.comment-body .reply:nth-child(4){
+
+	display: block;
+}
+*/
+.comment-body p,.reply-body p{
+	font-size: 1.6rem;
+	margin-bottom: 5px;
+	margin-left: 5px;
+	line-height: 2.2rem;
+}
+
+.comment-body h4{
+	font-size: 2rem;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	line-height: 2.2rem;
+	text-transform: capitalize;;
+}
+
+
+.reply-buttons{
+	overflow: hidden;
+}
+.reply-action,
+.reply-read{
+	float: right;
+	padding: 5px;
+	padding-top: 10px;
+	margin: 5px;
+	
+	cursor: pointer;
+	font-size: 1.2rem;
+	background: #63A3A5;
+	text-transform: uppercase;
+}
+
+.reply-read{
+	background: #81CBCB;
+
+}
+
+.reply-read:after {
+	content: "▼";
+	margin-top: 5px;
+	margin-left: 5px;
+}
+
+.reply-action:after {
+	float: right;
+	height: 14px;
+	width: 14px;
+	content: " ";
+	background: url('../img/talk/web-temas-reply-pen.png') no-repeat;
+	background-size: 100% auto;
+	margin-left: 5px;
+}
+
+.replies-container{
+	display: none;
+	overflow-y: scroll;
+	position: relative;
+	width: 100%;
+	height: 300px;
+	-webkit-overflow-scrolling: touch;
+}
+
+.talk-subjects-container{
+	float: left;
+	width: 100%;
+}
+
+.comment,
+.reply{
+
+	overflow: hidden;
+	padding-bottom: 15px;
+	padding-left: 5px;
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+
+.comment{
+	width: 100%;
+	max-width: 750px;
+	margin: 20px auto;
+}
+.reply{
+	
+	
+	float: left;
+	width: 90%;
+	margin-left: 10px;
+	border-bottom: 5px dotted #81CBCB;
+}
+.reply-form-wrapper,
+.comment-form-wrapper {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	overflow: hidden;
+	background: rgba(3,3,3,0.3);
+}
+.reply-form,
+.comment-form {
+	overflow: hidden;
+	background: url('../img/BG_PATTERNS/pattern_temas_@X.jpg') repeat;
+	margin: 0 auto;
+	padding: 10px;
+	padding-top: 20px;
+	width: 320px;
+	margin-top: 10px;
+}
+
+.reply-form {
+	width: 300;
+}
+
+#replyBody,
+#commentTitle,
+#commentBody {
+	display: block;
+	width: 270px;
+	height: 40px;
+	border: 2px solid #e0c1a4;
+	margin: 5px auto;
+	padding-left: 10px;
+}
+
+
+#commentTitle {
+	margin-top: 0;
+}
+#commentBody {
+	height: 120px;
+	margin-bottom: 0;
+}
+
+#comment-submit {
+	height: 33px;
+	width: 100%;
+	border: none;
+	background: url('../img/general/sprites/sprite_btns_actionposts@1.png');
+	background-position: center -184px;
+	background-repeat: no-repeat;
+	margin-top:-2px;
+}
+
+#replyBody {
+	margin-bottom: 0;
+}
+
+
+/********************************************************************************
+8. MUSIC
+*********************************************************************************/
+
+.music {
+	padding: 10px;
+	overflow: hidden;
+
+	background: url('../img/BG_PATTERNS/pattern_lafiesta_@x.jpg') repeat;
+}
+
+.music-desc{
+	float: left;
+	clear: left;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 2rem;
+	font-weight: 300;
+	line-height: 3rem;
+}
+.music-internal-wrapper {
+	width: 100%;
+	float: left;
+	background: rgba(3,3,3,0.15);
+	overflow: hidden;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.music-action{
+	clear: both;
+	height: 46px;
+	width: 230px;
+	padding:10px;
+	padding-left: 0;	
+	
+	margin: 0 auto;
+	background: url('../img/general/sprites/sprite_btns_actionposts@1.png');
+	background-position: 0 -415px;
+}
+
+.music-action:hover,
+.music-action:active{
+	background-position: 0 -369px;
+}
+
+.music-form{
+	clear: both;
+	display: none;
+	height: 200px;
+	margin-bottom: 40px;
+}
+
+.music-form-internal-wrapper {
+	width: 270px;
+	height: 500px;
+	margin:0 auto;
+}
+
+#songGenre,
+#songTitle,
+#songArtist {
+	width: 100%;
+	height: 40px;
+	padding-left: 10px;
+	border: 2px solid #e0c1a4;
+	float: left;
+	margin: 5px auto;
+}
+
+#songGenre {
+	margin-top: 0;
+	border-radius: 0;
+	-webkit-appearance: initial;
+	position: relative;
+}
+
+#songArtist {
+	margin-bottom:0;
+}
+
+#music-submit,
+#reply-submit {
+	border: none;
+	float: left;
+	width: 230px;
+	height: 46px;
+	background: url('../img/general/sprites/sprite_btns_actionposts@1.png');
+	background-position: 0 -184px;
+	margin: -2px 20px 0;
+}
+
+#music-submit:hover,
+#comment-submit:hover,
+#reply-submit:hover,
+#music-submit:active,
+#comment-submit:active,
+#reply-submit:active{
+	background-position: 0 -230px;
+}
+
+.place_holder{
+    color: #333; 
+}
+option{
+    color: #333;
+}
+
+
+
+.input-submit{
+	float: left;
+	clear: both;
+}
+
+.songs-container{
+	overflow: hidden;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	-webkit-display: flex;
+	-webkit-flex-direction: row;
+	-webkit-flex-wrap: wrap;
+	-moz-display: flex;
+	-moz-flex-direction: row;
+	-moz-flex-wrap: wrap;
+	-ms-display: flex;
+	-ms-flex-direction: row;
+	-ms-flex-wrap: wrap;
+}
+
+
+.song{
+	overflow: hidden;
+	list-style:none;
+	padding: 10px;
+	width: 100%;
+	float: left;
+	position: relative;
+}
+
+
+
+.song-number{
+	position: absolute;
+	height: 40px;
+	width: 40px;
+	font-family: 'Unkempt';
+	font-size: 1.8rem;
+
+	color: #fff;
+	background: url('../img/music/web-fiesta-song-disc.png') no-repeat;
+	background-size: 100% 100%;
+	line-height: 40px;
+	padding-left: 0.2rem;
+	padding-top: 0.2rem;
+	text-align: center;
+}
+
+.song-data{
+	float: left;
+	width: 100%;
+	padding-left: 45px;
+	margin-top: 0.5rem;
+
+}
+
+.song-title{
+	max-width: 96%;
+
+	margin-left: 1rem;
+	text-transform: uppercase;
+	font-family: 'Crushed';
+	font-size: 2rem;
+}
+
+.song-artist{
+	max-width: 96%;
+	margin-left: 1rem;
+	text-transform: capitalize;
+	color: #ea7b60;
+	font-family: 'Unkempt';
+	font-size: 1.4rem;
+}
+
+
+/********************************************************************************
+9. MONEY
+*********************************************************************************/
+
+
+.money{
+	overflow: hidden;
+	padding: 10px;
+
+	background: url('../img/BG_PATTERNS/pattern_lachanchita_@X.jpg') repeat;
+}
+
+.money-desc{
+	float: left;
+	clear: left;
+	margin-top: 20px;
+	margin-bottom: 40px;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 1.8rem;
+	font-weight: 300;
+	line-height: 2.6rem;
+}
+
+.money img{
+	width: 40%;
+	max-width: 244px;
+	float: left;
+	margin-left: 5%;
+	margin-bottom: 20px;
+}
+
+.money-data{
+	margin-top: 30px;
+	margin-left: 5%;
+	width: 50%;
+	float: left;
+}
+
+
+.money-account{
+	font-family: 'Crushed';
+	font-size: 1.7rem;
+}
+
+.money-bank{
+	color: #ed7961;
+	font-family: 'Unkempt';
+	text-transform: capitalize;
+	font-size: 1.3rem;
+}
+
+
+
+/********************************************************************************
+10. BOWL
+*********************************************************************************/
+
+
+
+
+.bowl{
+	
+	padding: 10px;
+	overflow: hidden;
+
+	background: url('../img/BG_PATTERNS/pattern_nuestrahistoria@x.jpg') repeat;
+}
+
+.bowl-body{
+	font-size: 1.6rem;
+	line-height: 2.2rem;	
+	
+}
+
+.bowl-desc{
+	float: left;
+	clear: left;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 1.8rem;
+	font-weight: 300;
+	line-height: 2.6rem;
+}
+
+.bowl-action{
+	clear: both;
+	height: 46px;
+	width: 230px;
+	margin:0 auto;
+	background: url('../img/general/sprites/sprite_btns_actionposts@1.png');
+	background-position: 0  -323px;
+}
+
+.bowl-action:hover,
+.bowl-action:active{
+	background-position: 0 -277px;
+}
+
+#bowlTextArea{
+	float: left;
+	clear: left;
+	width: 90%;
+	height: 100px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 5%;
+	margin-right: 5%;
+	font-family: 'Buda';
+	font-size: 1.5rem;
+	font-weight: 300;
+	border-color: #E0c1A4;
+	border-width: 2px;
+	border: none;
+}
+
+.bowl-submit{
+	height: 33px;
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+	border: none;
+	background: url('../img/general/sprites/sprite_btns_actionposts@1.png');
+	background-position: center -138px;
+	background-repeat: no-repeat;
+	margin-top: -2px;
+}
+
+.bowl-submit:hover,
+.bowl-submit:active{
+	background-position: center -92px;
+	
+}
+
+.bowl-logo{
+	width: 55%;
+	margin:10px auto 20px;
+	display: block;
+}
+
+.bowl-container{
+	position: relative;
+	width: 100%;
+	padding: 10px;
+}
+
+.bowl-form {
+	display: none;
+}
+
+.bowl-message{
+	float: left;
+	width: 30rem;
+	height: auto;
+	margin-left: 1rem;
+
+}
+
+.bowl-message-inner{
+	width: 100%;
+	overflow: hidden;
+	padding:10px 15px;
+}
+
+.bowl-guest{
+	display: block;
+	margin: 10px 0;
+	text-align: right;
+	font-family: 'Leckerli One';
+	font-size: 1.8rem;
+	color: #dd5f5f;
+}
+
+
+/********************************************************************************
+11. FIXED FOOTER
+*********************************************************************************/
+
+.main-area{
+	padding-bottom: 5px; /*So the footer wont eat the content when its fixed*/
+}
+
+#footer{
+	background:#c04243;
+	position: fixed;
+	width: 100%;
+	bottom: 0px;
+	transition: all 600ms ease-in;
+	-webkit-transition: all 600ms ease-in;
+	-moz-transition: all 600ms ease-in;
+}
+
+/*.footer-container{
+	position: absolute;
+	width: 100%;
+	height: 70px;
+	background: #ff6b67;
+}*/
+.footer-top{
+	
+	height: 30px;
+	background: #c04243;
+}
+
+
+.footer-top-left,
+.footer-top-right{
+	float: left;
+	
+
+}
+
+
+.footer-instagram{
+	display: none;
+}
+.timer-img{
+	float: right;
+	width: 50px;
+	height: 50px;
+	margin-top: -20px;
+	margin-right: 10px;
+	
+}
+
+.timer-title{
+	display: block;
+	color: #FFB098;
+	font-family: 'Crushed';
+	text-transform: uppercase;
+	font-size: 1.6rem;
+	line-height: 3rem;
+	padding-right: 10px;
+
+}
+.is-countdown{
+	border: none;
+	background: none;
+	float: right;
+	padding-right: 10px;
+	line-height: 3rem;
+}
+
+.countdown-text{
+	color: #fff;
+	font-size: 1.4rem;
+	font-family: 'Unkempt';
+	text-transform: capitalize;
+	margin-bottom: 0.6rem;
+}
+
+/***************************************************************************
+12.  MEDIA QUERY: min-width:; 480px;
+*****************************************************************************/
+@media only screen and (min-width: 480px){
+	
+	/***********************
+	GENERAL
+	***********************/
+	html{
+		font-size: 13px;
+	}
+
+	.story,
+	.info,
+	.talk,
+	.music,
+	.money,
+	.bowl{
+		padding: 15px;
+	}
+
+	.area-title{
+		margin-bottom: 15px;
+	}
+	.area-title-h{
+		/*font-size: 3.7rem;*/
+		padding-left: 10px;
+	}
+	
+	/***********************
+	HEADER
+	***********************/
+	.mobile-menu-icon {
+		margin-top: 20px;
+		width: 61px;
+		background-position: 0 -43px;
+		height: 43px;
+	}
+
+	.header-top{
+		height: 115px;
+	} 
+
+	.header-top:before{
+		top: 114px;
+	}
+
+	.logo-img{
+		height: 90px;
+		left: 25px;
+	}
+
+	.rsvp{
+		padding-top: 130px;
+		height: 200px;
+	}
+	
+	.rsvp-title{
+		line-height: 55px;
+	}
+
+
+	.rsvp-button{
+		width: 50px;
+		height: 50px;
+	}
+	
+	.rsvp-going-message,
+	.rsvp-not-going-message{
+		float: right;
+		width: 160px;
+
+		text-align: right;
+	}
+
+	.rsvp-going-message::before{
+		margin-top: -10px;
+		height: 70px;
+		width: 65px;
+	}
+
+	.rsvp-not-going-message::before{
+		margin-top: -5px;
+		height: 70px;
+		width: 93px;
+	}
+
+	.rsvp-message{
+		width: 200px;
+	}
+	.rsvp-left{
+		width: 40%
+	}
+	.guest-name{
+		max-width: 80%;
+	}
+
+	.options-icon{
+		background: url('../img/general/logout-flecha.png') no-repeat;
+		width: 25px;
+		height: 25px;
+		background-size: 25px 25px;
+		margin-top: 4px;
+		margin-left: 5px;
+	}
+
+	.options-ul{
+		top: 200px;
+		min-width: 180px;
+	}
+	.options-action.email:after,
+	.options-action.logout:after{
+		width: 20px;
+		height: 20px;
+		margin-top: 10px;
+	}
+	.options-action.email:after{
+	
+		background: url('../img/general/logout_mail.png') no-repeat;
+		background-size: 20px auto;
+
+	}
+
+	.options-action.logout:after{
+		
+		background: url('../img/general/logout_user.png') no-repeat;
+		background-size: 20px 20px;
+
+	}
+
+	/***********************
+	OUR STORY
+	***********************/
+	.story-text{
+		/*font-size: 2.4rem;*/
+	}
+	
+	.talk-menu-item,
+	.icon-menu-item,
+	.info-menu-item{
+		height: 75px;
+	}
+
+	.icon-menu-link{
+		width: 73px;
+		height: 75px;
+	}
+
+/*	.icon-menu-link:hover,
+	.icon-menu-link:active{
+		width: 73px;
+	}
+	*/
+	.nos{
+		/*font-size: 1.5rem;*/
+	}
+	
+	.fact{
+		/*font-size: 1.8rem;*/
+	}
+	
+	.story-event{
+		padding:15px;
+	}
+	.event-top:before,
+	.event-top:after{
+		height: 35px;
+	}
+	.event-title-container{
+		padding-top: 17px;
+		padding-left: 10px;
+	}
+	.event-title{
+		/*font-size: 2.3rem;*/
+	}
+	.event-date{
+		/*font-size: 1.9rem;*/
+	}
+
+
+	.event-text{
+		font-weight: lighter;
+	}
+
+	/***********************
+	INFO
+	***********************/
+
+	.info h4{
+		margin: 25px 0;
+	}
+
+	.info-article{
+		padding: 20px;
+		overflow: hidden;
+	}
+
+	/*Instagram gallery*/
+	.instagram-gallery div {
+		float: left;
+		margin: 10px 10px;
+	}
+
+
+	/***********************
+	TALK
+	***********************/
+	
+
+
+	.post{
+		padding: 15px;
+		overflow: hidden;
+	}
+	
+
+	.comment-action{
+		width: 345px;
+		height: 69px;
+		
+		background: url('../img/general/sprites/sprite_btns_actionposts@1.5.png') no-repeat;
+		background-position: -10px -760px;
+		margin: 0 auto;
+		padding: 0;
+	}
+
+	.comment-action:hover,
+	.comment-action:active{
+
+		background: url('../img/general/sprites/sprite_btns_actionposts@1.5.png') no-repeat;
+		background-position: -10px -691px;
+		
+	}
+	.comment,
+	.reply{
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+
+	.comment-body p{
+		margin:15px 0 15px 10px;
+	}
+
+	.reply{
+		padding-left: 10px;
+	}
+
+	#comment-submit,
+	#music-submit,
+	#reply-submit {
+		height: 49px;
+		background: url('../img/general/sprites/sprite_btns_actionposts@1.5.png');
+		background-position: center -276px;
+		background-repeat: no-repeat;
+	}
+
+	#comment-submit:hover,
+	#music-submit:hover,
+	#reply-submit:hover,
+	#comment-submit:active,
+	#music-submit:active,
+	#reply-submit:active {
+		background-position: center -345px;
+	}
+
+	/***********************
+	MUSIC
+	**********************
+	
+	
+	.music-action{
+		clear: both;
+		height: 69px;
+		width: 345px;
+		padding:0px;
+		padding-left: 0;
+		
+		margin: 10px auto 15px;
+		background: url('../img/general/sprites/sprite_btns_actionposts@1.5.png');
+		background-position: 0 -622px;
+	}
+
+	.music-action:hover,
+	.music-action:active{
+		background-position: 0 -553px;
+	}
+	*/
+	.song {
+		width: 80%;
+		margin: 0 auto;
+	}
+	.song-number{
+		height: 45px;
+		width: 45px;
+	}
+	.song-data{
+		margin-top: 0.2rem;
+	}
+	/***********************
+	MONEY
+	***********************/
+
+	/***********************
+	BOWL
+	***********************/
+	.bowl-message{
+		
+	}
+
+	.bowl-body{
+		margin: 20px 10px;
+	}
+
+	.bowl-submit{
+	height: 49px;
+	background: url('../img/general/sprites/sprite_btns_actionposts@1.5.png');
+	background-position: center -207px;
+	background-repeat: no-repeat;
+	}
+
+	.bowl-submit:hover,
+	.bowl-submit:active{
+	background-position: center -138px;
+	}
+	
+	.bowl-action{
+		clear: both;
+		height: 69px;
+		width: 345px;
+		padding-left: 25px;
+		padding-top: 0px;
+		
+		background: url('../img/general/sprites/sprite_btns_actionposts@1.5.png');
+		background-position: 0  -484px;
+	}
+
+	.bowl-action:hover,
+	.bowl-action:active{
+		background-position: 0 -415px;
+	}
+	/***********************
+	FIXED FOOTER
+	***********************/
+	
+	.timer-img{
+		margin-right: 10px;
+	}
+}
+
+
+
+
+/***************************************************************************
+13.  MEDIA QUERY: min-width:; 768px;
+*****************************************************************************/
+/* IPAD VERTICAL */
+@media only screen and (min-width: 768px){
+	/***********************
+	GENERAL
+	***********************/
+	html{
+		font-size: 18px;
+	}
+
+	.story,
+	.info,
+	.talk,
+	.music,
+	.money,
+	.bowl{
+		padding: 20px;
+	}
+
+	.area-title{
+		margin-bottom: 25px;
+	}
+	
+	.main-area{
+		padding-bottom: 80px; /*So the footer wont eat the content when its fixed*/
+	}
+	
+	.logo-container img{
+		left:2%;
+	}
+
+	.info-desc,
+	.story-text,
+	.talk-desc,
+	.music-desc,
+	.money-desc,
+	.bowl-desc
+	{
+		padding: 0 20px;
+	}
+	/***********************
+	HEADER
+	***********************/
+	.logo-img{
+		left: 30%;
+	}
+
+	
+
+
+	.rsvp{
+		padding: 20px;
+		padding-top: 130px;
+
+		height: 240px;
+	}
+
+	.rsvp-title{
+		font-size: 4rem;
+		line-height: 95px;
+	}
+
+	.welcome, .guest-name {
+		font-size: 2.7rem;
+	}
+	
+	.rsvp-button{
+		width: 90px;
+		height: 90px;
+	}
+
+	.rsvp-going-message::before{
+		height: 90px;
+		width: 85px;
+	}
+
+	.rsvp-not-going-message::before{
+		margin-top: -10px;
+		height: 90px;
+		width: 120px;
+	}
+
+	.rsvp-message{
+		width: 266px;		
+	}
+	.rsvp-left{
+		width: 30%
+	}
+	.guest-name{
+		max-width: 90%;
+	}
+
+	.options-icon{
+		background: url('../img/general/logout-flecha.png') no-repeat;
+		width: 35px;
+		height: 35px;
+		background-size: 35px 35px;
+		margin-top: 11px;
+	}
+
+	.options-ul{
+		top: 240px;
+		min-width: 240px;
+	}
+	.options-action.email:after,
+	.options-action.logout:after{
+		width: 25px;
+		height: 25px;
+		margin-top: 15px;
+	}
+	.options-action.email:after{
+	
+		background: url('../img/general/logout_mail.png') no-repeat;
+		background-size: 25px auto;
+
+	}
+
+	.options-action.logout:after{
+		
+		background: url('../img/general/logout_user.png') no-repeat;
+		background-size: 25px 25px;
+
+	}
+
+	/***********************
+	OUR STORY
+	***********************/
+	.story-text{
+		/*font-size: 2.4rem;*/
+	}
+	
+	.talk-menu-item,
+	.icon-menu-item,
+	.info-menu-item{
+		height: 137px;
+	}
+
+	.icon-menu-link{
+		width: 133px;
+		height: 137px;
+	}
+
+	/*.icon-menu-link:hover,
+	.icon-menu-link:active{
+		width: 133px;
+	}
+	*/
+	.nos{
+		font-size: 1.5rem;
+	}
+	
+	.fact{
+		font-size: 1.8rem;
+	}
+	
+	.story-event{
+		padding:20px;
+	}
+	.event-top:before,
+	.event-top:after{
+		height: 45px;
+	}
+	.event-title-container{
+		padding-top: 17px;
+		padding-left: 10px;
+	}
+	.event-title{
+		/*font-size: 2.3rem;*/
+	}
+	.event-date{
+		/*font-size: 1.9rem;*/
+	}
+
+	.event-text{
+		font-weight: lighter;
+	}
+
+
+	/***********************
+	INFO
+	***********************/
+	.info-timetable-li{
+		
+		margin: 15px;
+	}
+
+	/***********************
+	TALK
+	***********************/
+
+	.desc-menu-item .fact{
+		font-size: 1.7rem;
+	}
+
+	.desc-talk-item{
+		width: 120px;
+	}
+
+	.talk-menu-item {
+		height: 160px;
+	}
+
+	.talk-menu-item .icon-menu-link{
+		height: 160px;
+		width: 160px;
+	}
+
+
+
+	.comment-action{
+		width: 460px;
+		height: 92px;
+		
+		background: url('../img/general/sprites/sprite_btns_actionposts.png') no-repeat;
+		background-position: -10px -1013px;
+		margin: 0 auto;
+		padding: 0;
+	}
+
+	.comment-action:hover,
+	.comment-action:active{
+
+		background: url('../img/general/sprites/sprite_btns_actionposts.png') no-repeat;
+		background-position: -10px -920px;
+		
+	}
+	
+
+	.reply-form, .comment-form{
+		width: 500px;
+		margin-top:10px;
+	}
+		
+
+	#replyBody, #commentTitle, #commentBody{
+		width: 400px;
+		margin: 30px auto 0 ;
+	}
+	#comment-submit, #music-submit, #reply-submit{
+		height: 92px;
+		padding:0px;
+		margin: -1px auto;
+		width: 100%;
+		
+		background: url('../img/general/sprites/sprite_btns_actionposts.png');
+		background-position: center -368px;
+	}
+		
+	
+	
+	#comment-submit:hover,
+	#music-submit:hover,
+	#reply-submit:hover,
+	#comment-submit:active,
+	#music-submit:active,
+	#reply-submit:active{
+		background: url('../img/general/sprites/sprite_btns_actionposts.png');
+		background-position: center -460px;
+	}
+
+	.guest-img {
+	width: 80px;
+	height: 80px;
+	background: url('../img/general/sprites/sprite_id_thumbx1.5.jpg') no-repeat;
+	background-position: 0 0;
+	
+	}
+
+	.guest-img.grey{
+		background-position: 0 0;
+	}
+
+	.guest-img.green{
+		background-position: 0 -80px;
+	}
+
+	.guest-img.orange{
+		background-position: 0 -160px;
+	}
+
+	.guest-img.violet{
+		background-position: 0 -240px;
+	}
+
+	.guest-img.blue{
+		background-position: 0 -320px;
+	}
+
+	.guest-img.white{
+		background-position: 0 -400px;
+	}
+
+	.guest-img.yellow{
+		background-position: 0 -480px;
+	}
+
+	/***********************
+	MUSIC
+	***********************/
+	
+	
+	.music-action{
+		
+		height: 92px;
+		width: 460px;
+		padding:0px;
+		
+		
+		
+		background: url('../img/general/sprites/sprite_btns_actionposts.png');
+		background-position: 0 -828px;
+	}
+
+	.music-action:hover,
+	.music-action:active{
+		background: url('../img/general/sprites/sprite_btns_actionposts.png');
+		background-position: 0 -736px;
+	}
+
+	.music-form-internal-wrapper{
+		width: 460px;
+		padding-left: 30px;
+	}
+
+	
+
+	.song{
+		width: 50%;
+	}
+	
+	.song:nth-child(2n+1){
+		clear: left;
+	}
+	#songGenre, #songTitle, #songArtist{
+		
+		height: 55px;
+	}
+	#music-submit{
+		height: 92px;
+		width: 460px;
+		padding:0px;
+		margin-left: -20px;
+
+		background: url('../img/general/sprites/sprite_btns_actionposts.png');
+		background-position: 0 -368px;
+	}
+
+	#music-submit:hover,
+	#music-submit:active{
+		background: url('../img/general/sprites/sprite_btns_actionposts.png');
+		background-position: 0 -460px;
+	}
+
+	.music-internal-wrapper{
+		padding: 20px;
+	}
+
+
+	/***********************
+	MONEY
+	***********************/
+	.money-data {
+		margin-top: 80px;
+	}
+	/***********************
+	BOWL
+	***********************/
+
+	.bowl-body{
+		margin: 10px 10px;
+		font-size: 1.5rem;
+	}
+
+	.bowl-action{
+		height: 92px;
+		width: 460px;
+
+		background: url('../img/general/sprites/sprite_btns_actionposts.png');
+		background-position: 0 -644px;
+	}
+
+	.bowl-action:hover,
+	.bowl-action:active{
+		background: url('../img/general/sprites/sprite_btns_actionposts.png');
+		background-position: 0 -552px;
+	}
+
+	
+	#bowlTextArea{
+		height: 250px;
+	}
+
+	.bowl-submit{
+		height: 92px;
+		width: 460px;
+
+		background: url('../img/general/sprites/sprite_btns_actionposts.png');
+		background-position: 0 -276px;
+	}
+	
+	.bowl-submit:hover,
+	.bowl-submit:active{
+		background: url('../img/general/sprites/sprite_btns_actionposts.png');
+		background-position: 0 -184px;
+	}
+	.bowl-container{
+		position: relative;
+		width: 100%;
+		padding: 0px;
+	}
+
+	.bowl-message{
+		float: left;
+		width: 19rem;
+		height: auto;
+		margin-left: 0rem;
+
+	}
+	/***********************
+	FIXED FOOTER
+	***********************/
+	
+	.footer-instagram{
+		display: block;
+		margin-top: -20px;
+		margin-left: 20px;
+	}
+
+	.timer-img{
+		right: 165px;
+	}
+
+	.timer-title{
+		line-height: 3.2rem;
+	}
+
+	#footer{
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+	}
+
+	.footer-top {
+		height: 60px;
+	}
+	
+	.footer-bottom{
+		height: 60px;
+	}
+	.timer-img {
+		
+		height: 80px;
+		width: 80px;
+		margin: -35px 20px 0;
+
+	}
+
+}
+
+
+/* IPAD LANDSCAPE */
+@media only screen and (min-width: 1024px){
+
+	/***********************
+	GENERAL
+	***********************/
+
+
+	html{
+		font-size: 15px;
+	}
+	
+
+	.story,
+	.info,
+	.talk,
+	.music,
+	.money,
+	.bowl{
+		padding: 15px 15px 50px 15px;
+	}
+
+	.area-title{
+		margin-bottom: 15px;
+	}
+	.area-title-h{
+		/*font-size: 3.7rem;*/
+		padding-left: 10px;
+	}
+
+	.info-desc,
+	.story-text,
+	.talk-desc,
+	.post-desc,
+	.music-desc,
+	.money-desc,
+	.bowl-desc
+	{
+		padding: 0 60px;
+	}
+	
+	/***********************
+	HEADER
+	***********************/
+
+	.logo-img{
+		left: 5%;
+	}
+	
+	.options-icon{
+		margin-top: 18px;
+	}
+
+	/********************************************************************
+	DESKTOP MENU
+	*********************************************************************/	
+
+	.mobile-menu-icon {
+		display: none;
+	}
+
+	.desktop-menu {
+		display: block;
+		float: right;
+		width: 60px;
+		margin-top: 10px;
+		width: 650px;
+		overflow: hidden;
+		text-align: center;
+	}
+
+	.desktop-menu-ul {
+		line-height: 1.8rem;
+		overflow: hidden;
+		text-align: center;
+	}
+
+	.desktop-menu-li {
+		display: inline-block;
+		list-style-type: none;
+		margin-bottom: 5px;
+	}
+	
+	.desktop-menu-link {
+		font-family: 'Pacifico', cursive;
+		padding-left: 5px;
+		padding-right: 5px;
+		/*margin-right: 10px;*/
+		font-weight: 200;
+		color: #F76666;
+		text-transform: capitalize;
+		text-decoration: none;
+		border-bottom: 4px solid transparent;
+	}
+
+	.desktop-menu-text {
+		font-size: 1.8rem;	
+	}
+
+	.desktop-menu-link:hover {
+		border-bottom: 4px solid #F76666;	
+	}
+
+	/***********************
+	RSVP
+	***********************/
+	.rsvp {
+	
+		height: 225px;
+	}
+	.rsvp-button {
+		width: 75px;
+		height: 75px;
+	}
+	.rsvp-title {
+		font-size: 4rem;
+		line-height: 75px;
+	}
+
+	.rsvp-message{
+		font-size: 1.1rem;
+	}
+
+	.rsvp-left{
+		width: 60%
+	}
+	.guest-name{
+		max-width: 90%;
+	}
+
+	.options-icon{
+		background: url('../img/general/logout-flecha.png') no-repeat;
+		width: 30px;
+		height: 30px;
+		background-size: 30px 30px;
+		margin-top: 9px;
+	}
+
+	.options-ul{
+
+		top: 225px;
+		min-width: 240px;
+	}
+	.options-action.email:after,
+	.options-action.logout:after{
+		width: 20px;
+		height: 20px;
+		margin-top: 10px;
+	}
+	.options-action.email:after{
+	
+		background: url('../img/general/logout_mail.png') no-repeat;
+		background-size: 20px auto;
+
+	}
+
+	.options-action.logout:after{
+		
+		background: url('../img/general/logout_user.png') no-repeat;
+		background-size: 20px 20px;
+
+	}
+
+
+	/***********************
+	OUR STORY
+	***********************/
+	.story-text{
+		/*font-size: 2.4rem;*/
+	}
+
+	.story-text:before{
+		content: '';
+		float: left;
+		min-width: 200px;
+		min-height: 295px;
+		margin-right: 20px;
+		background: url('../img/historia/web-historia-novios.png') no-repeat;
+		background-size: 100% 100%;
+	}
+
+	.event-body{
+		width: 50%;
+		padding: 15px;
+	}
+
+	.event-text{
+		padding-top: 20px;
+		line-height: 1.3;
+	}
+	
+
+	/***********************
+	INFO
+	***********************/
+	.info-article {
+		padding: 40px;
+	}
+
+	.info-dresscode-img{
+		width: 400px;
+		float: left;
+		margin:20px;
+	}
+
+	.dresscode-ellas{
+		margin-top: 25px;
+	}
+
+	
+
+
+	/***********************
+	TALK
+	***********************/
+
+	.comment{
+
+	}
+
+	.reply{
+		margin-left: 40px;
+	}
+
+	/***********************
+	MUSIC
+	***********************/
+
+	.song{
+		width: 33%;
+	}
+	.song:nth-child(2n+1){
+		clear:none;
+	}
+	.song:nth-child(3n+1){
+		clear: left;
+	}
+
+	/***********************
+	MONEY
+	***********************/
+
+	.money-data {
+		margin-top: 75px;
+		margin-left: 10%;
+	}
+	.money-account {
+
+		font-size: 2.3rem;
+	}
+
+	.money-bank {
+		font-size: 1.8rem;
+	}
+	/***********************
+	BOWL
+	***********************/
+	.bowl-message{
+		float: left;
+		width: 21rem;
+		height: auto;
+		margin-left: 0rem;
+
+	}
+
+
+	/***********************
+	FIXED FOOTER
+	***********************/
+
+	.timer-img{
+		right: 165px;
+	}
+
+	.timer-title{
+		line-height: 3.2rem;
+	}
+
+	#footer{
+		position: fixed;
+		z-index: 9999;
+		bottom: 0;
+		width: 100%;
+	}
+
+	.footer-top {
+		height: 40px;
+	}
+	
+	.footer-bottom{
+		height: 40px;
+	}
+	
+}
+
+/* LAPTOP & MORE */
+@media only screen and (min-width: 1200px){
+	/***********************
+	GENERAL
+	***********************/
+
+	html{
+		font-size: 15px;
+	}
+	
+	/***********************
+	HEADER
+	***********************/
+	
+	/*Desktop Menu*/
+	
+	.desktop-menu{
+		width: 815px;
+		margin-top: 15px;
+	}
+	
+
+	/***********************
+	STORY
+	***********************/
+
+	.story-text:before{
+		content: '';
+		float: left;
+		min-width: 203px;
+		min-height: 300px;
+		background: url('../img/historia/web-historia-novios.png') no-repeat;
+		background-size: 100% 100%;
+	}
+
+	/***********************
+	TALK
+	***********************/
+	.comment-action{
+		background: url('../img/general/sprites/sprite_btns_actionposts.png') no-repeat;
+		background-position: -10px -1014px;
+	}
+}
+
+@media only screen and (min-width: 1320px){
+
+	/***********************
+	HEADER
+	***********************/
+	
+	/*Desktop Menu*/
+	
+	.desktop-menu{
+		width: 948px;
+		margin-top: 35px;
+	}
+	.options-ul{
+		left:15%;
+	}
+	
+}
